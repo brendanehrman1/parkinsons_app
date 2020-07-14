@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <WebView
+        android:id="@+id/webView1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="50dp">
+
+    </WebView>
+
+    <WebView
+        android:id="@+id/webView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="50dp" >
+
+    </WebView>
+
+    <WebView
+        android:id="@+id/webView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="50dp" >
+
+    </WebView>
+
+    <WebView
+        android:id="@+id/webView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="50dp" >
+
+    </WebView>
+
+    <WebView
+        android:id="@+id/webView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="50dp" >
+
+    </WebView>
+
+    <WebView
+        android:id="@+id/webView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="50dp" >
+
+    </WebView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/tabColor"
+        android:layout_alignParentTop="true">
+
+        <EditText
+            android:id="@+id/addressBar"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/addressbar_background"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="10sp"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/homeBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:onClick="search"
+            app:layout_constraintBottom_toBottomOf="@+id/addressBar"
+            app:layout_constraintEnd_toEndOf="@+id/addressBar"
+            app:layout_constraintTop_toTopOf="@+id/addressBar"
+            app:srcCompat="@drawable/ic_search" />
+
+        <RelativeLayout
+            android:id="@+id/homeBtn"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="5dp"
+            android:background="@color/buttonColor"
+            android:onClick="goHome"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_home" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/tabColor"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="28dp"
+            android:onClick="goBack"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/forwardBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="goForward"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/addBtn"
+            app:layout_constraintHorizontal_bias="0.35"
+            app:layout_constraintStart_toEndOf="@+id/backBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_forward" />
+
+        <ImageView
+            android:id="@+id/addBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="addTab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_add" />
+
+        <ImageView
+            android:id="@+id/tabsBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="goToTabs"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/settingsBtn"
+            app:layout_constraintStart_toEndOf="@+id/addBtn"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_tabs" />
+
+        <ImageView
+            android:id="@+id/settingsBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="25dp"
+            android:onClick="goToSettings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_android" />
+
+        <TextView
+            android:id="@+id/tabCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="#"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tabsBtn"
+            app:layout_constraintEnd_toEndOf="@+id/tabsBtn"
+            app:layout_constraintStart_toStartOf="@+id/tabsBtn"
+            app:layout_constraintTop_toTopOf="@+id/tabsBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/tiltMenu"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bottomMenu"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="50dp" />
+
+</RelativeLayout>

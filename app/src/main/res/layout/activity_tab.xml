@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/textColor"
+    tools:context=".TabActivity">
+
+    <WebView
+        android:id="@+id/tab1"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:onClick="goToTab"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <WebView
+        android:id="@+id/tab2"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:onClick="goToTab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </WebView>
+
+    <WebView
+        android:id="@+id/tab3"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:onClick="goToTab"
+        app:layout_constraintStart_toStartOf="@+id/tab1"
+        app:layout_constraintTop_toBottomOf="@+id/tab1">
+
+    </WebView>
+
+    <WebView
+        android:id="@+id/tab4"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:onClick="goToTab"
+        app:layout_constraintEnd_toEndOf="@+id/tab2"
+        app:layout_constraintTop_toBottomOf="@+id/tab2" />
+
+    <WebView
+        android:id="@+id/tab5"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:onClick="goToTab"
+        app:layout_constraintStart_toStartOf="@+id/tab1"
+        app:layout_constraintTop_toBottomOf="@+id/tab3">
+
+    </WebView>
+
+    <WebView
+        android:id="@+id/tab6"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="30dp"
+        android:onClick="goToTab"
+        app:layout_constraintEnd_toEndOf="@+id/tab2"
+        app:layout_constraintTop_toBottomOf="@+id/tab4">
+
+    </WebView>
+
+    <View
+        android:id="@+id/delete1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginBottom="125dp"
+        android:background="@drawable/delete_background"
+        android:onClick="deleteTab"
+        app:layout_constraintBottom_toBottomOf="@+id/tab1"
+        app:layout_constraintStart_toStartOf="@+id/tab1" />
+
+    <View
+        android:id="@+id/delete2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginBottom="125dp"
+        android:background="@drawable/delete_background"
+        android:onClick="deleteTab"
+        app:layout_constraintBottom_toBottomOf="@+id/tab2"
+        app:layout_constraintStart_toStartOf="@+id/tab2" />
+
+    <View
+        android:id="@+id/delete3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginBottom="125dp"
+        android:background="@drawable/delete_background"
+        android:onClick="deleteTab"
+        app:layout_constraintBottom_toBottomOf="@+id/tab3"
+        app:layout_constraintStart_toStartOf="@+id/tab3" />
+
+    <View
+        android:id="@+id/delete4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginBottom="125dp"
+        android:onClick="deleteTab"
+        android:background="@drawable/delete_background"
+        app:layout_constraintBottom_toBottomOf="@+id/tab4"
+        app:layout_constraintStart_toStartOf="@+id/tab4" />
+
+    <View
+        android:id="@+id/delete5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginBottom="125dp"
+        android:background="@drawable/delete_background"
+        android:onClick="deleteTab"
+        app:layout_constraintBottom_toBottomOf="@+id/tab5"
+        app:layout_constraintStart_toStartOf="@+id/tab5" />
+
+    <View
+        android:id="@+id/delete6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginBottom="125dp"
+        android:background="@drawable/delete_background"
+        android:onClick="deleteTab"
+        app:layout_constraintBottom_toBottomOf="@+id/tab6"
+        app:layout_constraintStart_toStartOf="@+id/tab6" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/tabColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/addBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="addTab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_add" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
